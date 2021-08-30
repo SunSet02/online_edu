@@ -19,7 +19,7 @@ public class TeatVod {
 //        根据视频id获取视频播放地址
         try {
 //            1.创建初始化对象
-            DefaultAcsClient defaultAcsClient = InitObject.initVodClient("LTAI5tRWxZEnnYZZa27mKftb", "yhkvuRFYqsL7CWIcyDdOdquc1tftcq");
+            DefaultAcsClient defaultAcsClient = InitObject.initVodClient("your keyid", "your keysecreat");
 //            2.创建获取视频的request和response对象
             GetPlayInfoRequest request = new GetPlayInfoRequest();
             GetPlayInfoResponse response = new GetPlayInfoResponse();
@@ -43,7 +43,7 @@ public class TeatVod {
         try {
             //        根据视频id获取视频播放凭证
             //        创建初始化对象
-            DefaultAcsClient defaultAcsClient = InitObject.initVodClient("LTAI5tRWxZEnnYZZa27mKftb", "yhkvuRFYqsL7CWIcyDdOdquc1tftcq");
+            DefaultAcsClient defaultAcsClient = InitObject.initVodClient("", "");
 //            创建获取视频凭证的request和response对象
             GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
             GetVideoPlayAuthResponse response = new GetVideoPlayAuthResponse();
@@ -64,7 +64,7 @@ public class TeatVod {
 //        视频上传功能测试
         String title = "tset by sdk";//上传到阿里云里面的视频名称
         String fileName = "D:\\BaiduNetdiskDownload\\online_edution\\test_video\\6 - What If I Want to Move Faster.mp4";//本地路径和名称
-        UploadVideoRequest request = new UploadVideoRequest("LTAI5tRWxZEnnYZZa27mKftb", "yhkvuRFYqsL7CWIcyDdOdquc1tftcq", title, fileName);
+        UploadVideoRequest request = new UploadVideoRequest("", "", title, fileName);
         /* 可指定分片上传时每个分片的大小，默认为2M字节 */
         request.setPartSize(2 * 1024 * 1024L);
         /* 可指定分片上传时的并发线程数，默认为1，(注：该配置会占用服务器CPU资源，需根据服务器情况指定）*/
